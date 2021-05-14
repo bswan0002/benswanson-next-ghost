@@ -32,6 +32,18 @@ export default function Home() {
         <p className="mt-8 leading-relaxed">
           This is placeholder text while I figure out what should go here
         </p>
+        <p className="mt-8 leading-relaxed">
+          This is placeholder text while I figure out what should go here
+        </p>
+        <p className="mt-16 leading-relaxed">
+          This is placeholder text while I figure out what should go here
+        </p>
+        <p className="mt-16 leading-relaxed">
+          This is placeholder text while I figure out what should go here
+        </p>
+        <p className="mt-16 leading-relaxed">
+          This is placeholder text while I figure out what should go here
+        </p>
       </div>
     </Layout>
   );
