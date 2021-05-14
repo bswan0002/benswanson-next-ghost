@@ -28,13 +28,16 @@ export default function Header() {
       <div className="grid grid-cols-1 md:hidden">
         <div className="flex items-center pr-4 text-primary">
           <button
-            className="p-4 pl-4 -my-2"
+            className="p-4 pl-4 -my-2 focus:outline-none"
             onClick={() => setIsExpanded(!isExpanded)}
             aria-label="toggle menu"
           >
             {isExpanded ? <X size={16} /> : <Menu size={16} />}
           </button>
-          <p className="font-sans text-sm font-semibold text-primary">
+          <p
+            className="font-sans text-sm font-semibold text-primary"
+            onClick={() => setIsExpanded(false)}
+          >
             {mobileTitle}
           </p>
         </div>

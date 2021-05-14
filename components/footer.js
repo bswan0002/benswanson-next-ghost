@@ -1,29 +1,32 @@
-import Container from "./container";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-gray-700">
-      <Container>
-        <div className="py-28 flex flex-col lg:flex-row items-center">
-          <h3 className="text-4xl lg:text-5xl font-bold tracking-tighter leading-tight text-center lg:text-left mb-10 lg:mb-0 lg:pr-4 lg:w-1/2">
-            Statically Generated with Next.js.
-          </h3>
-          <div className="flex flex-col lg:flex-row justify-center items-center lg:pl-4 lg:w-1/2">
+    <footer className="border-t border-gray-700 mt-10">
+      <div>
+        <div className="py-10 flex flex-col items-center">
+          <h3 className="text-3xl mb-8">Don't be a stranger ;)</h3>
+          <div className="text-xl inline-flex flex-row flex-wrap justify-center place-items-center space-x-8">
+            <a href="mailto:bswan0002@gmail.com" className="link-classic">
+              bswan0002@gmail.com
+            </a>
+
             <a
-              href="https://nextjs.org/docs/basic-features/pages"
-              className="mx-3 bg-gray-800 hover:bg-gray-700 text-white font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mb-6 lg:mb-0"
+              href="https://github.com/bswan0002/"
+              className="link-classic text-gray-300 h-5 w-5"
             >
-              Read Documentation
+              <FontAwesomeIcon icon={faGithub} />
             </a>
             <a
-              href={`https://github.com/zeit/next.js/tree/canary/examples/`}
-              className="mx-3 font-bold hover:underline"
+              href="https://www.linkedin.com/in/bswan0002/"
+              className="link-classic h-5 w-5"
             >
-              View on GitHub
+              <FontAwesomeIcon icon={faLinkedin} />
             </a>
           </div>
         </div>
-      </Container>
+      </div>
     </footer>
   );
 }

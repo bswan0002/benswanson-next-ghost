@@ -10,11 +10,12 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
 * {
   box-sizing: border-box;
+}
+
+@layer components {
+  .link-classic {
+    @apply text-blue-400 underline hover:text-blue-700 transition-colors duration-200 cursor-pointer;
+  }
 }
