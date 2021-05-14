@@ -7,7 +7,7 @@ export default function Footer() {
       <div>
         <div className="py-10 flex flex-col items-center">
           <h3 className="text-3xl mb-8">Don't be a stranger ;)</h3>
-          <div className="text-xl inline-flex flex-row flex-wrap justify-center place-items-center space-x-8">
+          <div className="text-lg md:text-xl inline-flex flex-row flex-wrap justify-center place-items-center space-x-7 md:space-x-8">
             <a href="mailto:bswan0002@gmail.com" className="link-classic">
               bswan0002@gmail.com
             </a>
