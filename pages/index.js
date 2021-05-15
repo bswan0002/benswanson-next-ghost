@@ -13,11 +13,11 @@ export default function Home() {
       </Head>
       <div className="mt-8 px-2 md:px-0">
         <h1>&#128075; Hi there :)</h1>
-        <h2>this is an h2</h2>
-        <p className="mt-8 text-lg leading-relaxed">
+        <h2 className="mt-8">this is an h2</h2>
+        <p className="mt-8 leading-relaxed">
           My name is Ben. I am a software engineer. Welcome to my website!
         </p>
-        <p className="mt-8 text-lg leading-relaxed">
+        <p className="mt-8 leading-relaxed">
           This cozy corner of the internet is intended to serve as a place where
           I can:
         </p>
