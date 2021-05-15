@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       fontFamily: {
         "sans": ["Quicksand", ...defaultTheme.fontFamily.sans],
+        "display": ["Comfortaa"],
       },
     },
   },

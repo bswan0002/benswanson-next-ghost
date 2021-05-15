@@ -1,8 +1,19 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&family=Quicksand:wght@400;500&display=swap");
+
+@layer base {
+  h1 {
+    @apply text-5xl font-display font-semibold;
+  }
+  h2 {
+    @apply text-3xl font-display font-semibold;
+  }
+  body:not(h1, h2) {
+    @apply font-normal md:font-medium;
+  }
+}
 
 @layer components {
   .link-classic {

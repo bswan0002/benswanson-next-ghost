@@ -12,7 +12,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="mt-8 px-2 md:px-0">
-        <h1 className="text-5xl">&#128075; Hi there :)</h1>
+        <h1>&#128075; Hi there :)</h1>
+        <h2>this is an h2</h2>
         <p className="mt-8 text-lg leading-relaxed">
           My name is Ben. I am a software engineer. Welcome to my website!
         </p>
