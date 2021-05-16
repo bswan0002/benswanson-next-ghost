@@ -11,7 +11,7 @@
     @apply text-3xl font-display font-semibold text-white;
   }
   body:not(h1, h2) {
-    @apply font-normal md:font-medium text-gray-100 text-lg md:text-xl;
+    @apply font-medium text-gray-300 text-lg md:text-xl;
   }
 }
 

@@ -26,9 +26,9 @@ export default function Header() {
     >
       {/* Mobile nav */}
       <div className="flex flex-col md:hidden">
-        <div className="items-center py-2 text-primary">
+        <div className="items-center py-2 text-white">
           <p
-            className="pl-4 font-sans text-sm font-semibold text-primary"
+            className="pl-4 font-sans text-sm font-semibold"
             onClick={() => setIsExpanded(false)}
           >
             {mobileTitle}
@@ -46,7 +46,7 @@ export default function Header() {
         )}
         {isExpanded &&
           defaultRoutes.map((route) => {
-            const defaultClasses = `pl-4 font-sans items-center border-t border-gray-700 py-4 font-semibold text-sm text-primary text-opacity-80`;
+            const defaultClasses = `pl-4 font-sans items-center border-t border-gray-700 py-4 font-semibold text-sm text-white text-opacity-80`;
 
             return route.path !== router.pathname ? (
               <Link href={route.path} key={route.path}>
@@ -63,7 +63,7 @@ export default function Header() {
           console.log(route);
           const isActive = route.path === router.pathname;
           const defaultClasses = `font-sans font-semibold flex rounded items-center justify-center py-2 text-sm`;
-          const activeClasses = `bg-gray-100 bg-opacity-5 border-b border-gray-100 border-opacity-50`;
+          const activeClasses = `bg-gray-100 bg-opacity-5 text-white border-b border-gray-100 border-opacity-50`;
           const inactiveClasses = `hover:bg-gray-100 hover:bg-opacity-5 transition-colors duration-200 text-white text-opacity-75 hover:text-opacity-100`;
           return (
             <Link href={route.path} key={route.path}>
