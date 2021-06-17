@@ -1,5 +1,5 @@
 import TopNav from "./topNav";
-import Header from "./header";
+// import Header from "./header";
 import Footer from "./footer";
 
 export default function Layout({ children }) {

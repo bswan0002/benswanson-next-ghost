@@ -53,7 +53,6 @@ export default function TopNav() {
       <div className="w-full bg-gray-800 border-b border-gray-700">
         <div className="hidden max-w-screen-md grid-cols-4 gap-1 mx-auto md:grid">
           {defaultRoutes.map((route) => {
-            console.log(route);
             const isActive = route.path === router.pathname;
             const defaultClasses = `font-sans font-semibold flex rounded items-center justify-center py-2 text-sm`;
             const activeClasses = `bg-gray-100 bg-opacity-5 text-white border-b border-gray-100 border-opacity-50`;
