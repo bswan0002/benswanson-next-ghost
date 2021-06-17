@@ -9,7 +9,7 @@ import NavItems from "./navItems";
 import useOnClickOutside from "../hooks/useOnClickOutside";
 // Routes
 import routes from "../config/routes";
-const defaultRoutes = [routes.home, routes.posts];
+const defaultRoutes = [routes.home, routes.posts, routes.about];
 
 export default function TopNav() {
   const [isExpanded, setIsExpanded] = useState(false);

@@ -7,6 +7,10 @@ const routes = {
     label: "Posts",
     path: "/posts",
   },
+  about: {
+    label: "About",
+    path: "/about",
+  },
 };
 
 export default routes;

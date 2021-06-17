@@ -2,23 +2,14 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Layout from "../components/layout";
+import { getPosts } from "../lib/api";
 
-const getPosts = async () => {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_GHOST_API_URL}/ghost/api/v3/content/posts/?key=${process.env.NEXT_PUBLIC_GHOST_API_KEY}`
-  ).then((res) => res.json());
-
-  console.log(res);
-  return res.posts.map((post) => post.title);
-};
-
-export const getStaticProps = async ({ params }) => {
+export const getStaticProps = async (context) => {
   const posts = await getPosts();
-  return { props: { posts } };
+  return { props: { posts }, revalidate: 60 * 60 * 12 };
 };
 
 export default function Home({ posts }) {
-  console.log(posts);
   return (
     <Layout>
       <Head>

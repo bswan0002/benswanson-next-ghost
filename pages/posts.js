@@ -1,6 +1,8 @@
 import Layout from "../components/layout";
 
-export default function Posts() {
+export { getStaticProps } from "./index";
+
+export default function Posts({ posts }) {
   return (
     <Layout>
       <div>posts</div>
