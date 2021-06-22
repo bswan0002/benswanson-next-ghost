@@ -5,18 +5,18 @@
 
 @layer base {
   h1 {
-    @apply text-5xl font-display font-semibold text-white;
+    @apply text-5xl font-semibold text-white font-display;
   }
   h2 {
-    @apply text-3xl font-display font-semibold text-white;
+    @apply text-3xl font-semibold text-gray-200 font-display;
   }
   body:not(h1, h2) {
-    @apply font-medium text-gray-300 text-lg md:text-xl;
+    @apply text-lg font-medium text-gray-300 md:text-xl;
   }
 }
 
 @layer components {
   .link-classic {
-    @apply text-blue-400 underline hover:text-blue-700 transition-colors duration-200 cursor-pointer;
+    @apply text-blue-400 underline transition-colors duration-200 cursor-pointer hover:text-blue-700;
   }
 }
