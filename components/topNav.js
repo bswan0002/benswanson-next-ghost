@@ -22,8 +22,14 @@ export default function TopNav() {
 
   useOnClickOutside(ref, () => setIsExpanded(false));
 
+  const getBasePath = (pathname) => {
+    return "/" + pathname.split("/")[1];
+  };
+
   const getCurrentRouteLabel = () => {
-    return defaultRoutes.find((route) => route.path === router.pathname).label;
+    return defaultRoutes.find(
+      (route) => route.path === getBasePath(router.pathname)
+    )?.label;
   };
 
   return (

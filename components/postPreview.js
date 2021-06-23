@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function PostPreview({ post }) {
   const formatDate = (date) => {
     const timeRemoved = date.split("T")[0];
@@ -26,12 +28,14 @@ export default function PostPreview({ post }) {
     return `${monthMap[month]} ${day}, ${year}`;
   };
   return (
-    <div className="my-8">
-      <h3 className="mb-1 text-2xl">{post.title}</h3>
-      <p className="mb-1 font-normal text-gray-400">{post.custom_excerpt}</p>
-      <span className="font-normal text-gray-400">
-        {formatDate(post.created_at)}
-      </span>
-    </div>
+    <Link href={`posts/${post.slug}`}>
+      <div className="p-4 my-2">
+        <h3>{post.title}</h3>
+        <p className="my-2 font-normal text-gray-400">{post.custom_excerpt}</p>
+        <span className="font-normal text-gray-400">
+          {formatDate(post.created_at)}
+        </span>
+      </div>
+    </Link>
   );
 }

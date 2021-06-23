@@ -7,12 +7,15 @@
 
 @layer base {
   h1 {
-    @apply text-5xl font-semibold text-white font-display;
+    @apply text-5xl font-semibold leading-tight text-white font-display;
   }
   h2 {
-    @apply text-3xl font-semibold text-gray-200 font-display;
+    @apply text-4xl font-semibold leading-tight text-gray-200 font-display;
   }
-  body:not(h1, h2) {
+  h3 {
+    @apply text-3xl font-medium leading-tight text-gray-300;
+  }
+  body:not(h1, h2, h3) {
     @apply text-lg font-medium text-gray-300 md:text-xl;
   }
 }
