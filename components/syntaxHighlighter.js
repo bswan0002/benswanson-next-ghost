@@ -4,15 +4,17 @@ import Prism from "prismjs";
 export default function SyntaxHighlighter({ data }) {
   function addKeywordTypes() {
     if (typeof Prism === "undefined") {
-      return;
+      return null;
     }
 
     Prism.hooks.add("wrap", function (env) {
-      console.log(typeof undefined);
-      if (env.type !== "keyword") {
-        return;
+      if (env.type == "keyword") {
+        env.classes.push("keyword-" + env.content);
       }
-      env.classes.push("keyword-" + env.content);
+      if (env.type == "operator") {
+        env.classes.push("operator-" + env.content);
+      }
+      return null;
     });
   }
 

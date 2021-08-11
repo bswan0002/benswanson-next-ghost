@@ -1,8 +1,22 @@
+pre {
+  @apply p-4 -mx-4 md:mx-0;
+}
+
+.token.keyword.keyword-import,
+.token.keyword.keyword-as,
+.token.keyword.keyword-from,
+.token.keyword.keyword-export,
+.token.keyword.keyword-return,
+.token.keyword.keyword-if,
+.token.keyword.keyword-else {
+  color: #d670d6;
+}
+
 .token.comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  @apply text-gray-300;
+  @apply text-gray-400;
 }
 
 .token.punctuation {
@@ -11,12 +25,11 @@
 
 .token.property,
 .token.tag,
-.token.boolean,
 .token.number,
 .token.constant,
 .token.symbol,
 .token.deleted {
-  @apply text-green-500;
+  @apply text-green-100;
 }
 
 .token.selector,
@@ -25,7 +38,7 @@
 .token.char,
 .token.builtin,
 .token.inserted {
-  @apply text-purple-500;
+  color: #ce9178;
 }
 
 .token.operator,
@@ -33,18 +46,21 @@
 .token.url,
 .language-css .token.string,
 .style .token.string {
-  @apply text-yellow-500;
+  @apply text-white;
 }
 
 .token.atrule,
 .token.attr-value,
-.token.keyword {
-  @apply text-blue-500;
+.token.boolean,
+.token.keyword,
+.token.operator.operator-\*,
+.token.operator.operator-\=\> {
+  color: #2472c8;
 }
 
 .token.function,
 .token.class-name {
-  @apply text-pink-500;
+  @apply text-yellow-100;
 }
 
 .token.regex,
@@ -55,7 +71,7 @@
 
 code[class*="language-"],
 pre[class*="language-"] {
-  @apply font-mono text-gray-200 bg-gray-800;
+  @apply font-mono text-base text-blue-300 bg-gray-800;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
@@ -63,9 +79,9 @@ pre[class*="language-"] {
   word-wrap: normal;
   line-height: 1.5;
 
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
+  -moz-tab-size: 2;
+  -o-tab-size: 2;
+  tab-size: 2;
 
   -webkit-hyphens: none;
   -moz-hyphens: none;

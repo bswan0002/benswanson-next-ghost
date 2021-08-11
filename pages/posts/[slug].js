@@ -1,7 +1,6 @@
 import Layout from "../../components/layout";
 import { getPostBySlug } from "../../lib/api";
 import { useRouter } from "next/router";
-import PostBody from "../../components/postBody";
 import SyntaxHighlighter from "../../components/syntaxHighlighter";
 
 export const getStaticProps = async ({ params }) => {
@@ -35,19 +34,14 @@ export default function Post({ post }) {
     );
   }
 
-  const myFunc = () => {
-    console.log("does this work?");
-    return null;
-  };
-
   return (
     <Layout>
       <SyntaxHighlighter data={post} />
-      <h1 className="mb-2">{post.title}</h1>
-      {/* <PostBody post={post.html} /> */}
+      <h1 className="mb-4">{post.title}</h1>
       <div
+        id="post"
         dangerouslySetInnerHTML={{ __html: post.html }}
-        className="space-y-4"
+        className="space-y-6"
       />
     </Layout>
   );

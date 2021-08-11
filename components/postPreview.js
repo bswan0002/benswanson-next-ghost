@@ -29,7 +29,7 @@ export default function PostPreview({ post }) {
   };
   return (
     <Link href={`posts/${post.slug}`}>
-      <div className="p-4 my-2">
+      <div className="p-4 my-2 border border-transparent rounded-lg cursor-pointer hover:bg-opacity-5 hover:border-gray-700 hover:bg-white">
         <h3>{post.title}</h3>
         <p className="my-2 font-normal text-gray-400">{post.custom_excerpt}</p>
         <span className="font-normal text-gray-400">
